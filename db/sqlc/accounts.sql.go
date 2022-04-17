@@ -38,3 +38,78 @@ func (q *Queries) CreateAccount(ctx context.Context, arg CreateAccountParams) (A
 	)
 	return i, err
 }
+
+const getAuthor = `-- name: GetAuthor :one
+SELECT id, owner, balance, currency, created_at FROM accounts
+WHERE id = $1 LIMIT 1
+`
+
+func (q *Queries) GetAuthor(ctx context.Context, id int64) (Account, error) {
+	row := q.db.QueryRowContext(ctx, getAuthor, id)
+	var i Account
+	err := row.Scan(
+		&i.ID,
+		&i.Owner,
+		&i.Balance,
+		&i.Currency,
+		&i.CreatedAt,
+	)
+	return i, err
+}
+
+const listAuthors = `-- name: ListAuthors :many
+SELECT id, owner, balance, currency, created_at FROM accounts
+ORDER BY id
+LIMIT $1 
+OFFSET $2
+`
+
+type ListAuthorsParams struct {
+	Limit  int32 `json:"limit"`
+	Offset int32 `json:"offset"`
+}
+
+func (q *Queries) ListAuthors(ctx context.Context, arg ListAuthorsParams) ([]Account, error) {
+	rows, err := q.db.QueryContext(ctx, listAuthors, arg.Limit, arg.Offset)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Account
+	for rows.Next() {
+		var i Account
+		if err := rows.Scan(
+			&i.ID,
+			&i.Owner,
+			&i.Balance,
+			&i.Currency,
+			&i.CreatedAt,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Close(); err != nil {
+		return nil, err
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
+const updateAccount = `-- name: UpdateAccount :exec
+UPDATE accounts 
+SET balance = $2
+WHERE id = $1
+`
+
+type UpdateAccountParams struct {
+	ID      int64 `json:"id"`
+	Balance int64 `json:"balance"`
+}
+
+func (q *Queries) UpdateAccount(ctx context.Context, arg UpdateAccountParams) error {
+	_, err := q.db.ExecContext(ctx, updateAccount, arg.ID, arg.Balance)
+	return err
+}
