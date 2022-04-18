@@ -39,23 +39,23 @@ func (q *Queries) CreateAccount(ctx context.Context, arg CreateAccountParams) (A
 	return i, err
 }
 
-const deleteAccounts = `-- name: DeleteAccounts :exec
+const deleteAccount = `-- name: DeleteAccount :exec
 DELETE FROM accounts
 WHERE id = $1
 `
 
-func (q *Queries) DeleteAccounts(ctx context.Context, id int64) error {
-	_, err := q.db.ExecContext(ctx, deleteAccounts, id)
+func (q *Queries) DeleteAccount(ctx context.Context, id int64) error {
+	_, err := q.db.ExecContext(ctx, deleteAccount, id)
 	return err
 }
 
-const getAuthor = `-- name: GetAuthor :one
+const getAccount = `-- name: GetAccount :one
 SELECT id, owner, balance, currency, created_at FROM accounts
 WHERE id = $1 LIMIT 1
 `
 
-func (q *Queries) GetAuthor(ctx context.Context, id int64) (Account, error) {
-	row := q.db.QueryRowContext(ctx, getAuthor, id)
+func (q *Queries) GetAccount(ctx context.Context, id int64) (Account, error) {
+	row := q.db.QueryRowContext(ctx, getAccount, id)
 	var i Account
 	err := row.Scan(
 		&i.ID,
@@ -67,20 +67,20 @@ func (q *Queries) GetAuthor(ctx context.Context, id int64) (Account, error) {
 	return i, err
 }
 
-const listAuthors = `-- name: ListAuthors :many
+const listAccounts = `-- name: ListAccounts :many
 SELECT id, owner, balance, currency, created_at FROM accounts
 ORDER BY id
 LIMIT $1 
 OFFSET $2
 `
 
-type ListAuthorsParams struct {
+type ListAccountsParams struct {
 	Limit  int32 `json:"limit"`
 	Offset int32 `json:"offset"`
 }
 
-func (q *Queries) ListAuthors(ctx context.Context, arg ListAuthorsParams) ([]Account, error) {
-	rows, err := q.db.QueryContext(ctx, listAuthors, arg.Limit, arg.Offset)
+func (q *Queries) ListAccounts(ctx context.Context, arg ListAccountsParams) ([]Account, error) {
+	rows, err := q.db.QueryContext(ctx, listAccounts, arg.Limit, arg.Offset)
 	if err != nil {
 		return nil, err
 	}
