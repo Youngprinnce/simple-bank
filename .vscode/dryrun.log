@@ -1,7 +1,8 @@
 make.exe --dry-run --always-make --keep-going --print-directory
 make.exe: Entering an unknown directory
-make.exe: Leaving an unknown directory
  
 make.exe: *** INTERNAL: readdir: Invalid argument
 .  Stop.
 
+make.exe: Leaving an unknown directory
+ 
