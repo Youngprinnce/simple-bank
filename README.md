@@ -19,30 +19,10 @@ The service is a simple bank. It will provide APIs for the frontend to do follow
     $ scoop install migrate
     ```
 
-- [DB Docs](https://dbdocs.io/docs)
-
-    ```bash
-    npm install -g dbdocs
-    dbdocs login
-    ```
-
-- [DBML CLI](https://www.dbml.org/cli/#installation)
-
-    ```bash
-    npm install -g @dbml/cli
-    dbml2sql --version
-    ```
-
 - [Sqlc](https://github.com/kyleconroy/sqlc#installation)
 
     ```bash
     sudo snap install sqlc
-    ```
-
-- [Gomock](https://github.com/golang/mock)
-
-    ``` bash
-    go install github.com/golang/mock/mockgen@v1.6.0
     ```
 
 ### Setup infrastructure
