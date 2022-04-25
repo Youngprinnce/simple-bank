@@ -7,7 +7,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Wed Apr 20 10:12:23 2022
+# Make data base, printed on Mon Apr 25 12:48:38 2022
 
 # Variables
 
@@ -43,7 +43,7 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-663e0636-1671-4754-b720-437a61362cd8-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-657510cf-ee22-4c6c-a452-18ad1f976cf1-sock
 # environment
 VSCODE_CWD = C:\Program Files\Microsoft VS Code
 # environment
@@ -73,7 +73,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_30336_FJAGSTRYLDHNSYFC
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_9832_WRCIKMIPMVCBCAMG
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -124,8 +124,7 @@ PROCESSOR_ARCHITEW6432 = AMD64
 .VARIABLES := 
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 11, GenuineIntel
-# en 
-vironment
+# environment
 OS = Windows_NT
 # environment
 VSCODE_IPC_HOOK = \\.\pipe\b7c2cffbbbb0a23ba7a83d5bd53828a7-1.66.2-main-sock
@@ -145,6 +144,7 @@ TEMP = C:\Users\ajibo\AppData\Local\Temp
 COMSPEC = C:\WINDOWS\system32\cmd.exe
 # environment
 ERLANG_HOME = C:\Program Files\erl-24.0
+ 
 # environment
 LC_ALL = C
 # environment
@@ -160,7 +160,7 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 30336
+VSCODE_PID = 9832
 # environment
 USERDOMAIN_ROAMINGPROFILE = MAYBORN
 # variable set hash-table stats:
@@ -176,12 +176,12 @@ USERDOMAIN_ROAMINGPROFILE = MAYBORN
 # C:\Program Files\ (key C:/Program Files/, mtime 1650173620): 68 files, no impossibilities.
 # C:\Program Files\dotnet\ (key C:/Program Files/dotnet/, mtime 1649066037): 8 files, no impossibilities.
 # C:\Program Files\Scripts\ (key C:/Program Files/Scripts/, mtime 1648295821): 5 files, no impossibilities.
-# C:\Program Files\Intel\WiFi\bin\ (key C:/Program Files/Intel/WiFi/bin/, mtime 1630450203): 36 f 
-iles, no impossibilities.
+# C:\Program Files\Intel\WiFi\bin\ (key C:/Program Files/Intel/WiFi/bin/, mtime 1630450203): 36 files, no impossibilities.
 # C:\Program Files\Common Files\Intel\WirelessCommon\ (key C:/Program Files/Common Files/Intel/WirelessCommon/, mtime 1630450190): 7 files, no impossibilities.
 # C:\Windows\System32\WindowsPowerShell\v1.0\ (key C:/Windows/System32/WindowsPowerShell/v1.0/, mtime 1622898672): 30 files, no impossibilities.
 # C:\WINDOWS\System32\Wbem (key C:/WINDOWS/System32/Wbem, mtime 1649189965): 155 files, no impossibilities.
-# . (key c:/Users/ajibo/Desktop/simple-bank, mtime 1650287013): 11 files, no impossibilities.
+# . (key c:/Users/ajibo/Desktop/simple-bank, mtime 1650287013): 11 files, n 
+o impossibilities.
 # C:\Program Files\apache-maven-3.8.3\bin (key C:/Program Files/apache-maven-3.8.3/bin, mtime 1632763522): 8 files, no impossibilities.
 # C:\Program Files\Docker\Docker\resources\bin (key C:/Program Files/Docker/Docker/resources/bin, mtime 1650210512): 13 files, no impossibilities.
 # C:\Program Files\Git\cmd (key C:/Program Files/Git/cmd, mtime 1650051680): 8 files, no impossibilities.
@@ -190,19 +190,18 @@ iles, no impossibilities.
 # C:\Program Files\Intel\Intel(R) Management Engine Components\DAL (key C:/Program Files/Intel/Intel(R) Management Engine Components/DAL, mtime 1630450201): 4 files, no impossibilities.
 # C:\WINDOWS (key C:/WINDOWS, mtime 1649190088): 136 files, no impossibilities.
 # C:\Windows (key C:/Windows, mtime 1649190088): 136 files, no impossibilities.
-# C:\Program Files\Go\bin (key C:/Program Files/ 
-Go/bin, mtime 1648296778): 4 files, no impossibilities.
+# C:\Program Files\Go\bin (key C:/Program Files/Go 
+/bin, mtime 1648296778): 4 files, no impossibilities.
 # C:\Users\ajibo\AppData\Roaming\Python\Python310\Scripts (key C:/Users/ajibo/AppData/Roaming/Python/Python310/Scripts, mtime 1648704943): 7 files, no impossibilities.
 # C:\Windows\System32\Wbem (key C:/Windows/System32/Wbem, mtime 1649189965): 155 files, no impossibilities.
 # C:\Program Files\Common Files\Oracle\Java\javapath (key C:/Program Files/Common Files/Oracle/Java/javapath, mtime 1635304657): 6 files, no impossibilities.
 # C:\Program Files\nodejs\ (key C:/Program Files/nodejs/, mtime 1645551655): 13 files, no impossibilities.
 # C:\WINDOWS\System32\WindowsPowerShell\v1.0\ (key C:/WINDOWS/System32/WindowsPowerShell/v1.0/, mtime 1622898672): 30 files, no impossibilities.
-# C:\Windows\system32 (key C:/Windows/system32, mtime 1650297531): 2966 files, no impossibilities.
-# C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL (key C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL, mtime 1630450215): 7 files, no im 
-possibilities.
+# C:\Windows\system32 (key C:/Windows/system32, mtime 1650886914): 2966 files, no impossibilities.
+# C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL (key C:/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL, mtime 1630450215): 7 files, no impossibilities.
 # C:\Program Files\Microsoft VS Code\bin (key C:/Program Files/Microsoft VS Code/bin, mtime 1649858018): 4 files, no impossibilities.
 # C:\WINDOWS\System32\OpenSSH\: could not be stat'd.
-# C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1650297531): 2966 files, no impossibilities.
+# C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1650886914): 2966 files, no impossibilities.
 
 # 6793 files, no impossibilities in 28 directories.
 
@@ -216,7 +215,11 @@ possibilities.
 all:
 #  Command line target.
 #  Implicit rule search has not been done.
-#  Modification time never checked.
+#  Modification time n 
+make.exe: *** INTERNAL: readdir: Invalid argument
+.  Stop.
+
+ever checked.
 #  File has not been updated.
 
 # files hash-table stats:
@@ -235,9 +238,6 @@ all:
 # strcache performance: lookups = 6823 / hit rate = 49%
 # hash-table stats:
 # Load=3473/8192=42%, Rehash=0, Collisions=2200/6823=32%
-# Finished Make data base on Wed Apr 20 10:12:23 2022
+# Finished Make data base on Mon Apr 25 12:48:38 2022
 
  
-make.exe: *** INTERNAL: readdir: Invalid argument
-.  Stop.
-
