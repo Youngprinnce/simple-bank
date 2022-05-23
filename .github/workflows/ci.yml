@@ -17,11 +17,11 @@ jobs:
       # Label used to access the service container
       postgres:
         # Docker Hub image
-        image: postgres:12
+        image: postgres
         # Provide the password for postgres
         env:
-          POSTGRES_PASSWORD: secret
-          POSTGRES_USER: root
+          POSTGRES_PASSWORD: admin
+          POSTGRES_USER: postgres
           POSTGRES_DB: simple_bank
         ports:
           - "5432:5432"
